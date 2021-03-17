@@ -13,7 +13,7 @@ Photo by <a href="https://unsplash.com/@jordannix?utm_source=unsplash&utm_medium
 ## Contexto
 
 El objeto de este proyecto es el de obtener de la Diputación Foral de Gipuzkoa, 2 dataset con los datos de las subastas
-a realizar y las ya realizasdas.
+a realizar y las ya realizadas.
 Al final del proyecto obtendremos 2 ficheros csv donde se muestran todos los datos almacenados.
 
 ## La Diputacion
