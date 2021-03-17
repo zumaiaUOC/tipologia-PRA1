@@ -39,7 +39,7 @@ El resultado del análisis de los 5 retails se puede consultar en el fichero **[
 
 ## Operativa
 
-Basicamente los 2 datasets obtenidos tienen como estructura común los siguientes campos:  
+Basicamente los dos datasets obtenidos tienen como estructura común los siguientes campos:  
 
 * URL
 * Número
@@ -79,7 +79,7 @@ fue el precio, las condiciones del inmueble o la falta de publicidad del evento.
 
 ## Licencia
 
-Se ha elegigido CC BY-NC-SA 4.0 ya que:
+Se ha elegido CC BY-NC-SA 4.0 ya que:
 Esta [licencia](LICENSE.md) no permite un uso comercial de la obra original ni de las posibles obras derivadas. 
 Además, la distribución de estas obras derivadas se debe hacer con una licencia igual a la que regula la obra original.
 
