@@ -119,4 +119,5 @@ Para su correcta ejecución recomiendo:
 
 
 ## EL DOI
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.4604713.svg)](https://doi.org/10.5281/zenodo.........)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.4609730.svg)](https://doi.org/10.5281/zenodo.4609730)
+
