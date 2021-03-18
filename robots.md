@@ -14,7 +14,7 @@ from utils import robots_to_df
 ```
 
 ### En un archivo plano tenemos las 5 tiendas online a analizar. 
-De dicho archivo plano obtenemos las urs y ejecutamos el script robots.py
+De dicho archivo plano obtenemos las URL y ejecutamos el script robots.py
 
 
 ```python
