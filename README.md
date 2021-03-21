@@ -14,7 +14,7 @@ Photo by <a href="https://unsplash.com/@jordannix?utm_source=unsplash&utm_medium
 
 El objetivo de este proyecto es el de obtener dos dataset de la Diputación Foral de Gipuzkoa con los datos de las subastas
 a realizar y las ya realizadas.
-Al final del proyecto obtendremos 2 ficheros CSV donde se muestran todos los datos almacenados.
+Al final del proyecto obtendremos dos ficheros CSV donde se muestran todos los datos almacenados.
 
 ## La Diputacion
 
