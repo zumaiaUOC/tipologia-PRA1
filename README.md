@@ -52,9 +52,9 @@ Basicamente los dos datasets obtenidos tienen como estructura común los siguien
 * Situación
 
 La forma de recopilar los datasets son muy parecidas y en el siguiente orden:  
-1. Se obtiene la URL raiz de la tienda (contendida en un archivo plano).
+1. Se obtiene la URL raíz de la tienda (contendida en un archivo plano).
 2. Se sustituye la URL por la palabra tienda.
-3. Se recorre la raiz inicial en busca de URL "hijos".
+3. Se recorre la raíz inicial en busca de la URL "hijos".
 4. Se recopilan las diferentes URLs en una lista que se ha de limpiar de datos innecesarios y elementos duplicados.
 5. Se recorre la lista de hijos en busca de nuevas URLs.
 6. Se recopilan las nuevas URLs y se realiza una vez más una limpieza de la nueva lista.
@@ -74,7 +74,7 @@ https://www.gipuzkoa.eus/es/
 El presente proyecto se inspira en la primera publicación que realizó la Diputación Foral de Gipuzkoa en los portales inmobiliarios de
 internet como "Idealista" y "Fotocasa", donde se informaba de las subastas.  
 
-Como se puede comprobar, muchas de las subastas que hay en el dataset obtenido quedaron desiertas. Habría que valorar si el motivo
+Como se puede comprobar, muchas de las subastas que hay en el dataset que se ha obtenido han quedado desiertas. Habría que valorar si el motivo
 fue el precio, las condiciones del inmueble o la falta de publicidad del evento.
 
 ## Licencia
@@ -96,11 +96,11 @@ Para su correcta ejecución se recomienda:
         $ mkdir -directorio
     
 2. Generar un entorno virtual   
-    en linux  
+    en Linux  
     
         $ python3 -m venv /path/to/new/virtual/environment   
     
-    en windows
+    en Windows
     
         c:\>c:\Python35\python -m venv c:\path\to\myenv
     
