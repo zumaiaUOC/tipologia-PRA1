@@ -22,7 +22,7 @@ Al final del proyecto obtendremos dos ficheros CSV donde se muestran todos los d
 
 <img src="https://egoitza.gipuzkoa.eus/documents/39465/42128/LogoSede2_eu.png" width="400" alt="Diputacion Foral de Gipuzkoa"/>  
 
-## Los dataset
+## Los Dataset
 
 Se encuentran almacenados en la carpeta data.
 
@@ -83,12 +83,7 @@ Se ha elegido CC BY-NC-SA 4.0 ya que:
 Esta [licencia](LICENSE.md) no permite un uso comercial de la obra original ni de las posibles obras derivadas. 
 Además, la distribución de estas obras derivadas se debe hacer con una licencia igual a la que regula la obra original.
 
-## Los dataset
-
-10. Dataset. Publicación del dataset en formato CSV en Zenodo (obtención del DOI)
-con una breve descripción.
-
-## Operativa
+## Código
 
 Para su correcta ejecución se recomienda:
 1. Generar una carpeta
@@ -117,9 +112,6 @@ Para su correcta ejecución se recomienda:
 ## Resultado final
 
 ![](data/resultado.png)
-
-
-
 
 ## DOI
 
