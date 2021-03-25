@@ -13,7 +13,7 @@ import os
 from utils import robots_to_df
 ```
 
-### En un archivo plano tenemos las 5 tiendas online a analizar
+### Archivo plano con páginas web de subastas
 De dicho archivo plano obtenemos las URL y ejecutamos el script robots.py.
 
 
@@ -29,9 +29,6 @@ diputacion
 
     'https://www.gipuzkoa.eus/es'
 
-
-
-Vemos que algunas tiendas tienen el fichero robots.txt y otras no.
 
 
 ```python
