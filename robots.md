@@ -13,7 +13,7 @@ import os
 from utils import robots_to_df
 ```
 
-### Archivo plano con páginas web de subastas
+### Archivo plano con las páginas web de subastas
 De dicho archivo plano obtenemos las URL y ejecutamos el script robots.py.
 
 
