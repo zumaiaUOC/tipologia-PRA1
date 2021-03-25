@@ -106,11 +106,10 @@ Para su correcta ejecución recomiendo:
 
         $ pip install requirements.txt
     
-4. Ejecutar cada un de los ejecutables según la tienda
+4. Ejecutar el scraping de las subastas de la Diputación:
 
-        $ python tienda_#.py
+        $ python diputacion.py
     
-    donde # es el número de tienda, desde 0 hasta 1.
     
 ## El resultado final
 ![](data/resultado.png)
