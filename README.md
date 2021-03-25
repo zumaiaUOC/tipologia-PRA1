@@ -1,4 +1,4 @@
-# Subastas de la Diputación.
+# Subastas de la Diputación
 
 ![](data/asim-z-kodappana-ks21cxRTzSo-unsplash.jpg)
 Photo by <a href="https://unsplash.com/@jordannix?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Jordan Nix</a> on <a href="/s/photos/baby-clothes?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
@@ -114,14 +114,14 @@ Para su correcta ejecución se recomienda:
     
     donde # es el número de tienda, desde 0 hasta 1.
     
-## El resultado final
+## Resultado final
 
 ![](data/resultado.png)
 
 
 
 
-## EL DOI
+## DOI
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.4609730.svg)](https://doi.org/10.5281/zenodo.4609730)
 
