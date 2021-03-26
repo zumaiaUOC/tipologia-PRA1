@@ -1,4 +1,4 @@
-# Subastas de la Diputación.
+# Subastas de la Diputación
 
 ![](data/pexels-carboxaldehyde-3664547.jpg)
  <a href="https://www.pexels.com/es-es/foto/hombre-de-camisa-azul-y-pantalon-marron-de-pie-junto-a-la-vaca-3664547/?utm_content=attributionCopyText&utm_medium=referral&utm_source=pexels">Foto de carboxaldehyde en Pexels</a>
@@ -12,9 +12,9 @@
 
 ## Contexto
 
-El objeto de este proyecto es el de obtener de la Diputación Foral de Gipuzkoa, 2 dataset con los datos de las subastas
-a realizar y las ya realizadas.
-Al final del proyecto obtendremos 2 ficheros csv donde se muestran todos los datos almacenados.
+El objetivo de este proyecto es el de obtener dos dataset de la Diputación Foral de Gipuzkoa con los datos de las subastas
+pendientes y las realizadas, respectivamente.
+Al final del proyecto dispondremos de dos ficheros CSV donde se muestran todos los datos almacenados.
 
 ## La Diputacion
 
@@ -22,26 +22,27 @@ Al final del proyecto obtendremos 2 ficheros csv donde se muestran todos los dat
 
 <img src="https://egoitza.gipuzkoa.eus/documents/39465/42128/LogoSede2_eu.png" width="400" alt="Diputacion Foral de Gipuzkoa"/>  
 
-## Los dataset
+## Los Dataset
 
 Se encuentran almacenados en la carpeta data.
 
-## Robots.txt
+## robots.txt
 
-Previa a la realización del trabajo, he generado un script para el análisis del fichero Robots.txt al objeto de conocer 
-las páginas y fichero podemos solicitar y cuales no.
+Previo a la realización del trabajo, se ha generado un script para el análisis del fichero Robots.txt con objeto de conocer 
+las páginas y ficheros que podemos solicitar y las que no.
 
 Para ejecutar el script:
 
     $ python robots.py
 
-El resultado del análisis de los 5 retails se puede consultar en el fichero **[robots.md](robots.md)**
+El resultado del análisis de los 5 retails se puede consultar en el fichero **[robots.md](robots.md)**.
 
-## Operativa:  
-Basicamente los 2 datasets obtenidos tienen como estructura comun los siguientes campos:  
+## Operativa
 
-* Url
-* Numero
+Los dos datasets obtenidos tienen como estructura común los siguientes campos:  
+
+* URL
+* Número
 * Tipo
 * Lugar
 * Descripción
@@ -50,55 +51,51 @@ Basicamente los 2 datasets obtenidos tienen como estructura comun los siguientes
 * Procedimiento  
 * Situación
 
-La forma de recopiar los datasets son muy parecidas y en el siguiente orden:  
-1. Obtendo la url raiz de la tienda (contendida en un archivo plano)
-2. Subtituyo la url por la palabra tienda  
-3. Recorro la raiz inicial en busca de url "hijos"  
-4. Recopilo los diferentes URL en una lista que la limpio de datos innecesarios y elementos duplicados  
-5. Recorro la lista de hijos en busca de nuevas url
-6. Recopilo las nuevas url y hago nuevamente una limpieza de la nueva lista.
-7. De esta última lista de url donde se detallan cada uno de los productos, realizo el scraping
-8. Genero un diccionario seleccionando los campos que más me interesan.
-9. Por último convierto el diccionario en un dataframe y este en un csv.
+Las formas de recopilar los datasets son muy parecidas y siguen el siguiente orden:  
+1. Se obtiene la URL raíz de la tienda (contendida en un archivo plano).
+2. Se sustituye la URL por la palabra tienda.
+3. Se recorre la raíz inicial en busca de la URL "hijos".
+4. Se recopilan las diferentes URLs en una lista que se ha de limpiar de datos innecesarios y elementos duplicados.
+5. Se recorre la lista de hijos en busca de nuevas URLs.
+6. Se recopilan las nuevas URLs y se realiza una vez más una limpieza de la nueva lista.
+7. De esta última lista de URLs donde se detallan cada uno de los productos, se realiza el scraping.
+8. Se genera un diccionario seleccionando los campos que más nos interesan.
+9. Por último, se convierte el diccionario en un dataframe y este en un archivo CSV.
 
-En todas las transformaciones y con el fin de preservar la url y el nombre comercial de la empresa retail,
-aplico el pundo 2
+En todas las transformaciones, con el fin de preservar la URL y el nombre comercial de la empresa retail,
+se aplica el punto 2.
 
 ## Propietarios de los datos
 
 https://www.gipuzkoa.eus/es/
 
-## Inspiración. 
+## Inspiración 
 
-El presente proyecto la primera publicación que realizó la Diputación Foral de Gipuzkoa en los portales inmobiliarios de
-internet como "Idealista" y "Fotocasa" donde informaban de las subastas.  
+El presente proyecto se inspira en la primera publicación que realizó la Diputación Foral de Gipuzkoa en los portales inmobiliarios de
+internet como "Idealista" y "Fotocasa", donde se informaba de las subastas.  
 
-Como se puede comprobar en el dataset obtenido, muchas de las subastas quedaron desiertas. Habría que valorar si el motivo
+Como se puede comprobar, muchas de las subastas que hay en el dataset que se ha obtenido han quedado desiertas. Habría que valorar si el motivo
 fue el precio, las condiciones del inmueble o la falta de publicidad del evento.
 
 ## Licencia
 
-He elegigido CC BY-NC-SA 4.0 ya que:
+Se ha elegido CC BY-NC-SA 4.0 ya que:
 Esta [licencia](LICENSE.md) no permite un uso comercial de la obra original ni de las posibles obras derivadas. 
 Además, la distribución de estas obras derivadas se debe hacer con una licencia igual a la que regula la obra original.
 
-## Los dataset
-10. Dataset. Publicación del dataset en formato CSV en Zenodo (obtención del DOI)
-con una breve descripción.
+## Código
 
-## Operativa.
-
-Para su correcta ejecución recomiendo:
+Para su correcta ejecución se recomienda:
 1. Generar una carpeta
 
         $ mkdir -directorio
     
 2. Generar un entorno virtual   
-    en linux  
+    en Linux  
     
         $ python3 -m venv /path/to/new/virtual/environment   
     
-    en windows
+    en Windows
     
         c:\>c:\Python35\python -m venv c:\path\to\myenv
     
@@ -106,17 +103,16 @@ Para su correcta ejecución recomiendo:
 
         $ pip install requirements.txt
     
-4. Ejecutar el scraping de las subastas de la Diputación:
+
+4. Ejecutar el scraping sobre las subastas de la Diputación:
 
         $ python diputacion.py
     
-    
-## El resultado final
+## Resultado final
+
 ![](data/resultado.png)
 
+## DOI
 
-
-
-## EL DOI
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.4609730.svg)](https://doi.org/10.5281/zenodo.4609730)
 
