@@ -1,36 +1,31 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# cargamos librerias
+# Cargamos las librerías que utilizaremos
 from bs4 import BeautifulSoup
 import pandas as pd
 import requests
 from functools import reduce
 
 
-# Cargamos txt
-
-
+# Cargamos el archivo .txt que contiene las urls
 with open("data/diputacion.txt", encoding="utf-8") as file:
     diputacion = [l.rstrip("\n") for l in file]
 
 
-# Seleccionamos las url necesarias
-
-
+# Seleccionamos dichas urls
 subastas = diputacion[0]
-
 celebradas = diputacion[1]
 
 
-# Primer scraping:
+# Empezamos con el web scraping de las subastas pendientes
 
+# Primer web scraping:
 headers = {
     "user-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36"
 }
 
 # r  = requests.get("https://" +url)
-
 
 r = requests.get(subastas, headers=headers)
 
@@ -80,7 +75,7 @@ for tr in rows:
     url_subastas.append(links)
 
 
-# Nuevo scraping
+# Hacemos un nuevo web scraping
 total_url = []
 
 headers = {
@@ -106,7 +101,7 @@ for i in url_subastas:
     total_url.append(total)
 
 
-# convertir la lista de las pendientes en dataframe
+# Convertimos la lista de las subastas pendientes en un dataframe
 subastas_pendientes = pd.DataFrame(
     total_url,
     columns=(
@@ -121,11 +116,15 @@ subastas_pendientes = pd.DataFrame(
         "situacion",
     ),
 )
-# Guardar
+
+# Guardamos el dataframe en un archivo CSV
 subastas_pendientes.to_csv("data/subastas_pendientes.csv")
 
 
-# ahora las subastas realizadas
+
+# Continuamos con el web scraping de las subastas realizadas
+
+# Primer web scraping
 r = requests.get(celebradas, headers=headers)
 
 soup = BeautifulSoup(r.content, "html5lib")
@@ -160,7 +159,7 @@ for link in soup.find_all("a"):
 start_letter = "https://www.gipuzkoa.eus/es/web/ogasuna/subastas/celebradas?"
 data_total_url = [k for k in url_data if start_letter in k]
 
-# Remove duplicated from list
+# Guardamos en otra lista las urls sin repeticiones
 res_data_total_url = []
 for i in data_total_url:
     if i not in res_data_total_url:
@@ -173,8 +172,8 @@ rest_total = res_data_total_url[1:]
 # Insertamos la url principal
 rest_total.insert(0, celebradas)
 
-# Obtener todas las url
 
+# Obtenemos todas las urls
 total_total = []
 
 for i in rest_total:
@@ -199,16 +198,14 @@ for i in rest_total:
 # Unificamos las listas concatenadas en una
 single_list = reduce(lambda x, y: x + y, total_total)
 
-# Remove duplicated from list
+# Guardamos en una nueva lista las urls sin repeticiones
 res_res_data_total_url = []
 for i in single_list:
     if i not in res_res_data_total_url:
         res_res_data_total_url.append(i)
 
 
-# El scraping de todas las subastas celebradas
-
-
+# Hacemos un nuevo web scraping
 total_url = []
 
 headers = {
@@ -234,8 +231,7 @@ for i in res_res_data_total_url:
     total_url.append(total)
 
 
-# Convertir en dataframe
-
+# Convertimos la lista de las subastas realizadas en un dataframe
 subastas_resueltas = pd.DataFrame(
     total_url,
     columns=(
@@ -250,5 +246,6 @@ subastas_resueltas = pd.DataFrame(
         "situacion",
     ),
 )
-# Guardar
+
+# Guardamos el dataframe en un archivo CSV
 subastas_resueltas.to_csv("data/subastas_resueltas.csv")
