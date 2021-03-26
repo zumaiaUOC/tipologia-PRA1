@@ -26,7 +26,7 @@ Al final del proyecto obtendremos dos ficheros CSV donde se muestran todos los d
 
 Se encuentran almacenados en la carpeta data.
 
-## Robots.txt
+## robots.txt
 
 Previo a la realización del trabajo, se ha generado un script para el análisis del fichero Robots.txt con objeto de conocer 
 las páginas y ficheros que podemos solicitar y las que no.
