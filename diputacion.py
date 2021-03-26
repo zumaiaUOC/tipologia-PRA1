@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# Cargamos las librerias que utilizaremos
+# Cargamos las librerías que utilizaremos
 from bs4 import BeautifulSoup
 import pandas as pd
 import requests
