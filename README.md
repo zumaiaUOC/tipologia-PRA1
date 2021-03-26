@@ -103,6 +103,7 @@ Para su correcta ejecución se recomienda:
 
         $ pip install requirements.txt
     
+
 4. Ejecutar el scraping sobre las subastas de la Diputación:
 
         $ python diputacion.py
