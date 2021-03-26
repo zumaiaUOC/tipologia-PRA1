@@ -8,8 +8,6 @@ noindex o proteger esas páginas con contraseña.
 
 ```python
 import os
-
-
 from utils import robots_to_df
 ```
  
@@ -21,8 +19,6 @@ with open("data/dfg.txt", encoding="utf-8") as file:
 diputacion = diputacion[0]
 diputacion
 ```
-
-
 
 
     'https://www.gipuzkoa.eus/es'
