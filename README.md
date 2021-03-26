@@ -1,6 +1,6 @@
 # Subastas de la Diputación
 
-![alt text](https://images.pexels.com/photos/3664547/pexels-photo-3664547.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260)
+![](data/pexels-carboxaldehyde-3664547.jpg)
  <a href="https://www.pexels.com/es-es/foto/hombre-de-camisa-azul-y-pantalon-marron-de-pie-junto-a-la-vaca-3664547/?utm_content=attributionCopyText&utm_medium=referral&utm_source=pexels">Foto de carboxaldehyde en Pexels</a>
 
 ## Autores
