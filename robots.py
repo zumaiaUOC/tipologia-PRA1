@@ -7,8 +7,6 @@ noindex o proteger esas páginas con contraseña.
 
 
 import os
-
-
 from utils import robots_to_df
 
 cwd = os.getcwd()
@@ -24,6 +22,3 @@ print("\n")
 print(diputacion)
 print("\n")
 print(robots_to_df(diputacion))
-
-
-
