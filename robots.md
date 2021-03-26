@@ -1,4 +1,4 @@
-# Robots.txt
+# robots.txt
 
 Un archivo robots.txt indica a los rastreadores de los buscadores qué páginas o archivos de tu sitio pueden solicitar y
 cuáles no. Principalmente, se utiliza para evitar que las solicitudes que recibe tu sitio lo sobrecarguen; no es un
@@ -12,10 +12,8 @@ import os
 
 from utils import robots_to_df
 ```
-
-### Archivo plano con las páginas web de subastas
-De dicho archivo plano obtenemos las URL y ejecutamos el script robots.py.
-
+ 
+De un archivo plano con las páginas web de subastas obtenemos las URL y ejecutamos el script robots.py.
 
 ```python
 with open("data/dfg.txt", encoding="utf-8") as file:
