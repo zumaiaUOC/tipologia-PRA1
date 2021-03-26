@@ -1,7 +1,7 @@
 # Subastas de la Diputación
 
-![](data/asim-z-kodappana-ks21cxRTzSo-unsplash.jpg)
-Photo by <a href="https://unsplash.com/@jordannix?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Jordan Nix</a> on <a href="/s/photos/baby-clothes?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+![](data/pexels-carboxaldehyde-3664547.jpg)
+ <a href="https://www.pexels.com/es-es/foto/hombre-de-camisa-azul-y-pantalon-marron-de-pie-junto-a-la-vaca-3664547/?utm_content=attributionCopyText&utm_medium=referral&utm_source=pexels">Foto de carboxaldehyde en Pexels</a>
 
 ## Autores
 
@@ -39,7 +39,7 @@ El resultado del análisis de los 5 retails se puede consultar en el fichero **[
 
 ## Operativa
 
-Basicamente los dos datasets obtenidos tienen como estructura común los siguientes campos:  
+Los dos datasets obtenidos tienen como estructura común los siguientes campos:  
 
 * URL
 * Número
@@ -51,7 +51,7 @@ Basicamente los dos datasets obtenidos tienen como estructura común los siguien
 * Procedimiento  
 * Situación
 
-La forma de recopilar los datasets son muy parecidas y en el siguiente orden:  
+Las formas de recopilar los datasets son muy parecidas y siguen el siguiente orden:  
 1. Se obtiene la URL raíz de la tienda (contendida en un archivo plano).
 2. Se sustituye la URL por la palabra tienda.
 3. Se recorre la raíz inicial en busca de la URL "hijos".
@@ -103,11 +103,9 @@ Para su correcta ejecución se recomienda:
 
         $ pip install requirements.txt
     
-4. Ejecutar cada un de los ejecutables según la tienda
+4. Ejecutar el scraping sobre las subastas de la Diputación:
 
-        $ python tienda_#.py
-    
-    donde # es el número de tienda, desde 0 hasta 1.
+        $ python diputacion.py
     
 ## Resultado final
 
