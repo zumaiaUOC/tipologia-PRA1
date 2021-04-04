@@ -28,7 +28,7 @@ Se encuentran almacenados en la carpeta data.
 
 ## robots.txt
 
-Previo a la realización del trabajo, se ha generado un script para el análisis del fichero Robots.txt con objeto de conocer 
+Previo a la realización del trabajo, se ha generado un script para el análisis del fichero robots.txt con objeto de conocer 
 las páginas y ficheros que podemos solicitar y las que no.
 
 Para ejecutar el script:
