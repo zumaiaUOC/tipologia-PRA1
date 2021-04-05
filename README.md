@@ -114,5 +114,5 @@ Para su correcta ejecución se recomienda:
 
 ## DOI
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.4609730.svg)](https://doi.org/10.5281/zenodo.4609730)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.4662752.svg)](https://doi.org/10.5281/zenodo.4662752)
 
