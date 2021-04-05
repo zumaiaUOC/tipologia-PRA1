@@ -110,7 +110,7 @@ Para su correcta ejecución se recomienda:
     
 ## Resultado final
 
-![](Datasets/resultado.png)
+![](data/resultado.png)
 
 ## DOI
 
