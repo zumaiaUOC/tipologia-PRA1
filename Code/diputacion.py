@@ -118,7 +118,7 @@ subastas_pendientes = pd.DataFrame(
 )
 
 # Guardamos el dataframe en un archivo CSV
-subastas_pendientes.to_csv("data/subastas_pendientes.csv")
+subastas_pendientes.to_csv("Datasets/data/subastas_pendientes.csv")
 
 
 
@@ -248,4 +248,4 @@ subastas_resueltas = pd.DataFrame(
 )
 
 # Guardamos el dataframe en un archivo CSV
-subastas_resueltas.to_csv("data/subastas_resueltas.csv")
+subastas_resueltas.to_csv("Datasets/data/subastas_resueltas.csv")
