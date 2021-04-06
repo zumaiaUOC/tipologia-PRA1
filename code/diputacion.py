@@ -9,7 +9,7 @@ from functools import reduce
 
 
 # Cargamos el archivo .txt que contiene las urls
-with open("Datasets/data/diputacion.txt", encoding="utf-8") as file:
+with open("datasets/data/diputacion.txt", encoding="utf-8") as file:
     diputacion = [l.rstrip("\n") for l in file]
 
 
@@ -118,7 +118,7 @@ subastas_pendientes = pd.DataFrame(
 )
 
 # Guardamos el dataframe en un archivo CSV
-subastas_pendientes.to_csv("Datasets/data/subastas_pendientes.csv")
+subastas_pendientes.to_csv("datasets/data/subastas_pendientes.csv")
 
 
 
@@ -248,4 +248,4 @@ subastas_resueltas = pd.DataFrame(
 )
 
 # Guardamos el dataframe en un archivo CSV
-subastas_resueltas.to_csv("Datasets/data/subastas_resueltas.csv")
+subastas_resueltas.to_csv("datasets/data/subastas_resueltas.csv")
