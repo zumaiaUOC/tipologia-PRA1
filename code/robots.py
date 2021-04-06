@@ -12,7 +12,7 @@ from utils import robots_to_df
 cwd = os.getcwd()
 print(cwd)
 
-with open("datasets/data/dfg.txt", encoding="utf-8") as file:
+with open("data/dfg.txt", encoding="utf-8") as file:
     diputacion = [l.rstrip("\n") for l in file]
 diputacion = diputacion[0]
 
