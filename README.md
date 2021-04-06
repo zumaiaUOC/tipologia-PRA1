@@ -33,9 +33,10 @@ las páginas y ficheros que podemos solicitar y las que no.
 
 Para ejecutar el script:
 
-    $ python robots.py
+    $ python code/robots.py
 
-El resultado del análisis de los 5 retails se puede consultar en el fichero **[robots.md](robots.md)**.
+El resultado del análisis de la web de la Diputación Foral de Gipuzkoa,
+se puede consultar en el fichero **[robots.md](doc/robots.md)**.
 
 ## Operativa
 
@@ -52,18 +53,15 @@ Los dos datasets obtenidos tienen como estructura común los siguientes campos:
 * Situación
 
 Las formas de recopilar los datasets son muy parecidas y siguen el siguiente orden:  
-1. Se obtiene la URL raíz de la tienda (contendida en un archivo plano).
-2. Se sustituye la URL por la palabra tienda.
+1. Se obtiene la URL raíz de la diputación foral (contendida en un archivo plano).
+2. Se sustituye la URL por la raiz necesaria.
 3. Se recorre la raíz inicial en busca de la URL "hijos".
 4. Se recopilan las diferentes URLs en una lista que se ha de limpiar de datos innecesarios y elementos duplicados.
 5. Se recorre la lista de hijos en busca de nuevas URLs.
 6. Se recopilan las nuevas URLs y se realiza una vez más una limpieza de la nueva lista.
 7. De esta última lista de URLs donde se detallan cada uno de los productos, se realiza el scraping.
-8. Se genera un diccionario seleccionando los campos que más nos interesan.
-9. Por último, se convierte el diccionario en un dataframe y este en un archivo CSV.
+8. Por último, se convierte el diccionario en un dataframe y este en un archivo CSV.
 
-En todas las transformaciones, con el fin de preservar la URL y el nombre comercial de la empresa retail,
-se aplica el punto 2.
 
 ## Propietarios de los datos
 
@@ -106,11 +104,27 @@ Para su correcta ejecución se recomienda:
 
 4. Ejecutar el scraping sobre las subastas de la Diputación:
 
-        $ python diputacion.py
+        $ python code/diputacion.py
     
 ## Resultado final
 
-![](Datasets/datasets_image.png)
+![](code/data/datasets_image.png)
+
+## Contribuciones
+
+| Contribuciones       | Firma    | 
+| :------------- | :----------: | 
+|  Investigación previa | Integrante 1, Integrante 2   | 
+| Redacción de las respuestas   | Integrante 1, Integrante 2 | 
+| Desarrollo código   | Integrante 1, Integrante 2 | 
+
+Integrante 1: 
+
+        Oscar Rojo Martín         zumaia@uoc.edu  
+        
+Integrante 2:
+
+        Álvaro Rodríguez Pardo    alvarorp22@uoc.edu
 
 ## DOI
 
