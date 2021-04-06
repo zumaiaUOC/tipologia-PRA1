@@ -9,7 +9,7 @@ from functools import reduce
 
 
 # Cargamos el archivo .txt que contiene las urls
-with open("data/diputacion.txt", encoding="utf-8") as file:
+with open("Datasets/data/diputacion.txt", encoding="utf-8") as file:
     diputacion = [l.rstrip("\n") for l in file]
 
 
