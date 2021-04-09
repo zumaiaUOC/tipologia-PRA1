@@ -54,12 +54,13 @@ Los dos datasets obtenidos tienen como estructura común los siguientes campos:
 
 Las formas de recopilar los datasets son muy parecidas y siguen el siguiente orden:  
 1. Se obtiene la URL raíz de la diputación foral (contendida en un archivo plano).
-2. Se sustituye la URL por la raiz necesaria.
+2. Se sustituye la URL por la raíz necesaria.
 3. Se recorre la raíz inicial en busca de la URL "hijos".
 4. Se recopilan las diferentes URLs en una lista que se ha de limpiar de datos innecesarios y elementos duplicados.
 5. Se recorre la lista de hijos en busca de nuevas URLs.
 6. Se recopilan las nuevas URLs y se realiza una vez más una limpieza de la nueva lista.
-7. Por último, se convierte el diccionario en un dataframe y este en un archivo CSV.
+7. De esta última lista de URLs donde se detallan cada uno de los productos, se realiza el scraping.
+8. Finalmente, se convierte el diccionario en un dataframe y este en un archivo CSV.
 
 
 ## Propietarios de los datos
