@@ -24,7 +24,9 @@ Al final del proyecto dispondremos de dos ficheros CSV donde se muestran todos l
 
 ## Los Dataset
 
-Se encuentran almacenados en la carpeta data dentro de la carpeta code.
+Se encuentran almacenados en la carpeta data dentro de la carpeta code:
+- **[subastas pendientes](code/data/subastas_pendientes.csv)**.
+- **[subastas celebradas](code/data/subastas_resueltas.csv)**.
 
 ## robots.txt
 
