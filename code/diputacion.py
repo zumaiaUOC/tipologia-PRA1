@@ -31,13 +31,11 @@ soup = BeautifulSoup(r.content, "html5lib")
 # Generamos una lista vacia
 url_data = []
 
-for table in soup.find_all("table", {"class": "footable stripe dataTable no-footer no-basicDataTable"}):
-    # Creamos un condicionante donde si hay subastas pendientes, ejecute el scriping y en caso contrario imprima
-    # "No hay subastas pendientes".
-    if type(table) is type(None):
-        print("No hay subastas pendientes")
-    # Si hay subastas pendientes, ejecuta el siguiente código hasta guardar los datos en un csv
-    else:
+# Mediante try(), se recogerán las subastas pendientes en caso de haberlas, y si no las hay,
+# con except() generaremos un mensaje que imprima por pantalla un mensaje avisando de que
+# no existen subastas pendientes
+try:
+    for table in soup.find("table", {"class": "footable stripe dataTable no-footer no-basicDataTable"}):
         for rows in table.find("tr"):
             cols = table.find_all("tr")
             f = len(cols)
@@ -47,64 +45,69 @@ for table in soup.find_all("table", {"class": "footable stripe dataTable no-foot
                 a = a.replace("\t", " ")
                 url_data.append(a)
 
-    lista = url_data[0:f]
-    lista = [i.split() for i in lista]
+        lista = url_data[0:f]
+        lista = [i.split() for i in lista]
 
-    # Convertimos la lista en dataframe
-    resumen = pd.DataFrame(lista, columns=lista[0])[1:]
+        # Convertimos la lista en dataframe
+        resumen = pd.DataFrame(lista, columns=lista[0])[1:]
 
-    headers = {
-        "user-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36"
-    }
-    r = requests.get(subastas, headers=headers)
-    soup = BeautifulSoup(r.content, "html5lib")
-    url_subastas = []
-
-    table = soup.find("table", {"class": "footable stripe dataTable no-footer no-basicDataTable"})
-    rows = table.findAll("a")
-    for tr in rows:
-        links = tr.get("href")
-        url_subastas.append(links)
-
-    # Hacemos un nuevo web scraping
-    # Generamos una lista vacia
-    total_url = []
-    headers = {
-        "user-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36"
-    }
-    for i in url_subastas:
-        r = requests.get(i, headers=headers)
+        headers = {
+            "user-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36"
+        }
+        r = requests.get(subastas, headers=headers)
         soup = BeautifulSoup(r.content, "html5lib")
-        # Generamos una nueva lista
-        total = []
-        # Bscamos "span class: lora-font-book" dentro del código
-        resulta = soup.findAll("span", attrs={"class": "lora-font-book"})
-        # iteramos para generar una lista
-        for link in resulta:
-            text = link.get_text()
-            total.append(text)
-        # añadimos a la nueva lista la url
-        total.insert(0, i)
-        # añadimos total la lista general
-        total_url.append(total)
+        url_subastas = []
 
-    # Convertimos la lista de las subastas pendientes en un dataframe
-    subastas_pendientes = pd.DataFrame(
-        total_url,
-        columns=(
-            "url",
-            "numero",
-            "tipo",
-            "lugar",
-            "descripcion",
-            "importe",
-            "fecha",
-            "procedimiento",
-            "situacion",
-        ),
-    )
-    # Guardamos el dataframe en un archivo CSV
-    subastas_pendientes.to_csv("data/subastas_pendientes.csv")
+        table = soup.find("table", {"class": "footable stripe dataTable no-footer no-basicDataTable"})
+        rows = table.findAll("a")
+        for tr in rows:
+            links = tr.get("href")
+            url_subastas.append(links)
+
+        # Hacemos un nuevo web scraping
+        # Generamos una lista vacia
+        total_url = []
+        headers = {
+            "user-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36"
+        }
+        for i in url_subastas:
+            r = requests.get(i, headers=headers)
+            soup = BeautifulSoup(r.content, "html5lib")
+            # Generamos una nueva lista
+            total = []
+            # Buscamos "span class: lora-font-book" dentro del código
+            resulta = soup.findAll("span", attrs={"class": "lora-font-book"})
+            # iteramos para generar una lista
+            for link in resulta:
+                text = link.get_text()
+                total.append(text)
+            # añadimos a la nueva lista la url
+            total.insert(0, i)
+            # añadimos total la lista general
+            total_url.append(total)
+
+        # Convertimos la lista de las subastas pendientes en un dataframe
+        subastas_pendientes = pd.DataFrame(
+            total_url,
+            columns=(
+                "url",
+                "numero",
+                "tipo",
+                "lugar",
+                "descripcion",
+                "importe",
+                "fecha",
+                "procedimiento",
+                "situacion",
+            ),
+        )
+        # Guardamos el dataframe en un archivo CSV
+        subastas_pendientes.to_csv("data/subastas_pendientes.csv")
+        
+except:
+    print("No hay subastas pendientes")
+
+    
 
 # Continuamos con el web scraping de las subastas realizadas
 
